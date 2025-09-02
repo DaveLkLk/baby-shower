@@ -1,0 +1,76 @@
+@import url("./reset.css");
+
+:root{
+    font-size: 15px;
+    --fondo-pagina: #e3ffef;
+    --card-width: 500px;
+
+    --clr-1: #253923;
+}
+
+body{
+    background: var(--fondo-pagina);
+}
+.container{
+    display: grid;
+    margin: 0 auto;
+    width: var(--card-width);
+    max-width: 100%;
+    border: 2px solid red;
+}
+.card{
+    position: relative;
+    background: #fff;
+    background: #10101021;
+    overflow: hidden;
+    width: 100%;
+    max-width: var(--card-width);
+    margin: auto;
+    transition: transform 0.3s;
+}
+.card_text{
+    position: absolute;
+    z-index: 1;
+    
+}
+.card_text.ini{
+    bottom: 10%;
+    right: 0;
+    height: max-content;
+    width: calc(var(--card-width) / 2.5);
+}
+.card_text.ini span{
+    display: block;
+    font-family: hatton, system-ui;
+    padding: 20px;
+    font-size: .9rem;
+    color: var(--clr-1);
+}
+.card_text.invite{
+    width: 70vw;
+    border: 1px solid red;
+    margin-top: 5rem;
+    left: 50%;
+    padding: 0 2rem;
+    margin-left: -35vw;
+}
+.card_text.invite span{
+    font-family: hatton, system-ui;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    color: var(--clr-1);
+    text-wrap: pretty;
+}
+
+
+.card_image{
+    position: relative;
+    height: auto;
+}
+.card_image img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
