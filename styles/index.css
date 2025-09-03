@@ -82,7 +82,7 @@ body{
 }
 .card_text .leonardo{
     width: 100%;
-    font-size: 4.2rem;
+    font-size: 4rem;
     letter-spacing: 4px;
     font-family: safira;
     font-weight: 500;
@@ -138,7 +138,8 @@ body{
 
 
 .card_image img{
-    width: 100%;
+    /* width: 100%; */
+    max-width: 500px;
     height: auto;
     object-fit: contain;
     display: block;
@@ -288,4 +289,13 @@ body{
   animation-delay: 0.3s; 
   animation-timeline: view();
   animation-range: entry 50% cover 30%;
+}
+
+@media screen and (max-width: 495px) {
+    .card_text .leonardo{
+        top: 180px;
+    }
+    .card_text .padres{
+        top: 430px;
+    }
 }
