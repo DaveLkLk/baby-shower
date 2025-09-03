@@ -102,8 +102,40 @@ body{
     position: absolute;
     top: 450px;
     left: 0;
-    background-color: rgba(255, 0, 0, 0.144);
 }
+
+.card_text.sugerencia{
+    font-family: dancing;
+    font-size: 3.5rem;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 38px;
+    color: #886247;
+
+    opacity: 0;
+    animation: aparecerSugerencia 2s ease-out forwards;
+    animation-timeline: view();
+    animation-range: entry 50% cover 30%;
+}
+.card_text.recepcion{
+    font-family: dancing;
+    font-size: 4.4rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    color: #606848;
+
+    opacity: 0;
+    animation: aparecerRecepcion 2s ease-out forwards;
+    animation-timeline: view();
+    animation-range: entry 50% cover 30%;
+}
+
+
 
 .card_image img{
     width: 100%;
@@ -181,7 +213,7 @@ body{
 
 .card_text.saludo {
   opacity: 0;
-  animation: aparecerRebote 1.7s ease-out forwards; /* 👈 forwards congela el último frame */
+  animation: aparecerRebote 2s ease-out forwards;
   animation-timeline: view();
   animation-range: entry 50% cover 30%;
   font-size: 2rem;
@@ -211,6 +243,26 @@ body{
     transform: translate(-50%, 0); /* centrado + posición final */
   }
 }
+@keyframes aparecerSugerencia {
+  from {
+    opacity: 0;
+    transform: translateY(-50px); /* inicia arriba */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* posición final */
+  }
+}
+@keyframes aparecerRecepcion {
+  from {
+    opacity: 0;
+    transform: translateY(-50px); /* inicia arriba */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* posición final */
+  }
+}
 
 .card_text.parents {
   width: 100%;
@@ -221,7 +273,7 @@ body{
 .card_text .leonardo {
   /* animación */
   opacity: 0;
-  animation: aparecerLeonardo 1s ease-out forwards;
+  animation: aparecerLeonardo 2s ease-out forwards;
   animation-timeline: view();
   animation-range: entry 50% cover 30%;
 }
@@ -232,8 +284,8 @@ body{
 
   /* animación */
   opacity: 0;
-  animation: aparecerPadres 1s ease-out forwards;
-  animation-delay: 0.3s; /* entra después de Leonardo */
+  animation: aparecerPadres 2s ease-out forwards;
+  animation-delay: 0.3s; 
   animation-timeline: view();
   animation-range: entry 50% cover 30%;
 }
