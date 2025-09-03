@@ -105,6 +105,10 @@ body{
 }
 
 .card_text.sugerencia{
+    width: 100%;
+    position: relative;
+}
+.card_text.sugerencia .sug{
     font-family: dancing;
     font-size: 3.5rem;
     text-align: center;
@@ -118,6 +122,30 @@ body{
     animation-timeline: view();
     animation-range: entry 50% cover 30%;
 }
+.card_text.sugerencia .sug_text{
+    font-family: young;
+    font-size: .9rem;
+    top: 150px;
+    position: absolute;
+    width: 80%;
+    text-align: center;
+    top: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.card_text.sugerencia .sug_list{
+    position: absolute;
+    width: 80%;
+    text-align: center;
+    top: 215px;
+    font-size: .9rem;
+    line-height: 1.4rem;
+    left: 50%;
+    font-family: young;
+    display: grid;
+    transform: translateX(-50%);
+}
+
 .card_text.recepcion{
     font-family: dancing;
     font-size: 4.4rem;
