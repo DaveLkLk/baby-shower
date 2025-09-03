@@ -100,7 +100,7 @@ body{
     font-weight: 400;
     text-align: center;
     position: absolute;
-    top: 450px;
+    top: 460px;
     left: 0;
 }
 
@@ -291,11 +291,3 @@ body{
   animation-range: entry 50% cover 30%;
 }
 
-@media screen and (max-width: 495px) {
-    .card_text .leonardo{
-        top: 180px;
-    }
-    .card_text .padres{
-        top: 430px;
-    }
-}
