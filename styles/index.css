@@ -16,7 +16,6 @@ body{
     margin: 0 auto;
     width: var(--card-width);
     max-width: 100%;
-    border: 2px solid red;
 }
 .card{
     position: relative;
