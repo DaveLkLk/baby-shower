@@ -43,11 +43,24 @@
 input{
   max-width: 100%;
 }
-div > span {
-  display: block;
-}
 
 @font-face {
   font-family: 'hatton';
   src: url("../fonts/PP\ Hatton\ Medium\ 500.otf"), format('.otf');
+}
+@font-face {
+  font-family: 'young';
+  src: url("../fonts/The\ Youngest\ Serif-Book.ttf"), format('.ttf');
+}
+@font-face {
+  font-family: 'dancing';
+  src: url("../fonts/DancingScript-Regular.otf"), format('.otf');
+}
+@font-face {
+  font-family: 'safira';
+  src: url("../fonts/Safira\ March\ Personal\ Use\ Only.ttf"), format('.ttf');
+}
+@font-face {
+  font-family: 'brittany';
+  src: url("../fonts/BrittanySignature.ttf"), format('.ttf');
 }

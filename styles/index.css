@@ -21,7 +21,6 @@ body{
     position: relative;
     background: #fff;
     background: #10101021;
-    overflow: hidden;
     width: 100%;
     max-width: var(--card-width);
     margin: auto;
@@ -61,15 +60,180 @@ body{
     text-wrap: pretty;
 }
 
-
-.card_image{
-    position: relative;
-    height: auto;
+.card_text.saludo{
+    width: 100%;
+    position: absolute;
+    top: 45px;
 }
+.card_text.saludo p{
+    width: 100%;
+    font-family: dancing, system-ui;
+    font-size: 3.1rem;
+    letter-spacing: 3px;
+    color: #886247;
+    font-weight: 700;
+    text-wrap: pretty;
+    text-align: center;
+}
+
+.card_text.parents{
+    width: 100%;
+    position: relative;
+}
+.card_text .leonardo{
+    width: 100%;
+    font-size: 4.2rem;
+    letter-spacing: 4px;
+    font-family: safira;
+    font-weight: 500;
+    text-align: center;
+    position: absolute;
+    top: 192px;
+}
+.card_text .padres{
+    width: 100%;
+    margin-top: 2rem;
+    padding-left: 1rem;
+    font-size: 2.3rem;
+    letter-spacing: 4px;
+    font-family: brittany;
+    font-weight: 400;
+    text-align: center;
+    position: absolute;
+    top: 450px;
+    left: 0;
+    background-color: rgba(255, 0, 0, 0.144);
+}
+
 .card_image img{
     width: 100%;
     height: auto;
     object-fit: contain;
     display: block;
     margin: 0 auto;
+}
+
+.card .card_button{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: -120px;
+    left: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+}
+.card_button .btn{
+    padding: 1rem 3rem;
+    background: #8f9e7d;
+    color: white;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-family: hatton, system-ui;
+}
+
+.card .card_timer{
+    position: absolute;
+    width: 100%;
+    top: 141px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0 2rem;
+}
+.card_timer .num,
+.card_timer .num_desc{
+    text-align: center;
+    font-family: young, system-ui;
+    color: #5c3d19;
+}
+.card_timer .num{
+    font-weight: bold;
+    font-size: 2.1rem;
+}
+.card_timer .num_desc{
+    font-size: .9rem;
+}
+.card_timer .time_dots{
+    font-weight: bolder;
+    font-size: 2rem;
+
+}
+
+@keyframes aparecerRebote {
+  0% {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(10px); /* pasa un poco el destino */
+  }
+  70% {
+    transform: translateY(-5px); /* rebote hacia arriba */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* posición final fija */
+  }
+}
+
+.card_text.saludo {
+  opacity: 0;
+  animation: aparecerRebote 1.7s ease-out forwards; /* 👈 forwards congela el último frame */
+  animation-timeline: view();
+  animation-range: entry 50% cover 30%;
+  font-size: 2rem;
+}
+
+
+/* Leonardo: solo caída vertical */
+@keyframes aparecerLeonardo {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Padres: caída vertical pero manteniendo el centrado horizontal */
+@keyframes aparecerPadres {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50px); /* centrado + arriba */
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0); /* centrado + posición final */
+  }
+}
+
+.card_text.parents {
+  width: 100%;
+  position: relative;
+}
+
+/* --- Leonardo --- */
+.card_text .leonardo {
+  /* animación */
+  opacity: 0;
+  animation: aparecerLeonardo 1s ease-out forwards;
+  animation-timeline: view();
+  animation-range: entry 50% cover 30%;
+}
+
+/* --- Padres --- */
+.card_text .padres {
+  left: 50%;
+
+  /* animación */
+  opacity: 0;
+  animation: aparecerPadres 1s ease-out forwards;
+  animation-delay: 0.3s; /* entra después de Leonardo */
+  animation-timeline: view();
+  animation-range: entry 50% cover 30%;
 }
