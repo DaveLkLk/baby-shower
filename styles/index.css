@@ -24,22 +24,37 @@ body, html{
     height: 50px;
     display: none;
 }
+.music, .shopp{
+  position: fixed;
+  border-radius: 50%;
+  z-index: 100;
+  padding: 1.5rem;
+  background-color: var(--clr-1);
+  --clr: var(--clr-2);
+}
 .music{
   position: fixed;
   bottom: 1rem;
   right: 1rem;
-  padding: 1rem;
-  border-radius: 50%;
-  z-index: 100;
-}
-.music{
   opacity: .5;
-  background-color: var(--clr-1);
-  --clr: var(--clr-2);
   transition: opacity .3s;
 }
 .music.active{
   opacity: 1;
+}
+.shopp{
+  bottom: 6rem;
+  right: 1rem;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.596);
+  animation: wiggle 2s infinite;
+}
+@keyframes wiggle {
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(30deg); }
+  50%  { transform: rotate(0deg); }
+  75%  { transform: rotate(-30deg); }
+  100% { transform: rotate(0deg); }
 }
 
 .card{
@@ -153,10 +168,10 @@ body, html{
 }
 .card_text.sugerencia .sug_text{
     font-family: young;
-    font-size: clamp(.6rem, 3vw, 1rem);
+    font-size: clamp(.6rem, 2.7vw, .9rem);
     top: 150px;
     position: absolute;
-    width: 80%;
+    width: 90%;
     text-align: center;
     top: 130px;
     left: 50%;
@@ -165,9 +180,10 @@ body, html{
 .card_text.sugerencia .sug_list{
     position: absolute;
     width: 80%;
-    text-align: center;
+    /* text-align: center; */
+    font-weight: 600;
     top: 215px;
-    font-size: clamp(.6rem, 3vw, .9rem);
+    font-size: clamp(.5rem, 2.5vw, .9rem);
     line-height: clamp(1rem, 4vw, 1.5rem);
     left: 50%;
     font-family: young;

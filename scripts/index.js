@@ -41,3 +41,8 @@ const fechaObjetivo = new Date("2025-09-20T19:00:00").getTime();
         audio.muted = !audio.muted;
         btn.classList.toggle("active");
     });
+
+    const btnShop = document.getElementById("shopp");
+    btnShop.addEventListener("click", () => {
+        window.open('https://www.thingstogetme.com/1787507aac228', '_blank');
+    });
