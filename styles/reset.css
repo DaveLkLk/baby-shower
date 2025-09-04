@@ -1,17 +1,16 @@
 ::-webkit-scrollbar{
-  background: #1b192e;
+  background: #d0d4c0;
   cursor:pointer;
   width: 10px;
 }
 ::-webkit-scrollbar-thumb{
-  background: #364a9b;
+  background: #253923;
   transition: background .3s var(--tr-e-out);
   cursor: pointer;
   border-radius: 5px;
-  /* display: none; */
 }
 ::-webkit-scrollbar-thumb:hover{
-  background: #3650ba;
+  background: #2e472c;
   cursor: pointer;
 }
 ::-webkit-scrollbar-track{
@@ -39,6 +38,9 @@
 * > svg,
 * > path{
   pointer-events: none;
+}
+button svg{
+  fill: var(--clr);
 }
 input{
   max-width: 100%;

@@ -24,7 +24,23 @@ body, html{
     height: 50px;
     display: none;
 }
-
+.music{
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  padding: 1rem;
+  border-radius: 50%;
+  z-index: 100;
+}
+.music{
+  opacity: .5;
+  background-color: var(--clr-1);
+  --clr: var(--clr-2);
+  transition: opacity .3s;
+}
+.music.active{
+  opacity: 1;
+}
 
 .card{
     position: relative;
