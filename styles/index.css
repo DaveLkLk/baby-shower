@@ -154,7 +154,8 @@ body, html{
 }
 .card_text.sugerencia .sug{
     font-family: dancing;
-    font-size: clamp(3rem, 6vw, 4.4rem);
+    font-size: clamp(3rem, 5vw, 4rem);
+    text-wrap: nowrap;
     text-align: center;
     width: 100%;
     position: absolute;
@@ -169,23 +170,23 @@ body, html{
 .card_text.sugerencia .sug_text{
     font-family: young;
     font-size: clamp(.6rem, 2.7vw, .9rem);
-    top: 150px;
     position: absolute;
     width: 90%;
     text-align: center;
-    top: 130px;
+    top: 110px;
     left: 50%;
     transform: translateX(-50%);
 }
 .card_text.sugerencia .sug_list{
     position: absolute;
     width: 80%;
+    height: max-content;
     /* text-align: center; */
     font-weight: 600;
-    top: 215px;
     font-size: clamp(.5rem, 2.5vw, .9rem);
-    line-height: clamp(1rem, 4vw, 1.5rem);
+    line-height: clamp(.8rem, 3vw, 1rem);
     left: 50%;
+    top: 220px;
     font-family: young;
     display: grid;
     transform: translateX(-50%);
@@ -256,10 +257,10 @@ body, html{
 }
 .card_timer .num{
     font-weight: bold;
-    font-size: 5vw;
+    font-size: clamp(2rem, 4vw, 3rem);
 }
 .card_timer .num_desc{
-    font-size: 3vw;
+    font-size: clamp(.6rem, 2.5vw, .9rem);
 }
 .card_timer .time_dots{
     font-weight: bolder;
@@ -364,3 +365,11 @@ body, html{
   animation-range: entry 50% cover 30%;
 }
 
+@media screen and (max-width: 460px) {
+    .card_text.sugerencia .sug_list{
+      top: 200px;
+    }
+  .card .card_button{
+    top: -90px;
+  }
+}
