@@ -56,10 +56,12 @@ const fechaObjetivo = new Date("2025-09-27T19:00:00").getTime();
     modalClose.addEventListener("click", () => {
         modal.classList.remove("active");
         audio.muted = false;
+        audio.play().catch(err => console.log(err));
         btn.classList.add("active");
     });
     modalConfirmar.addEventListener("click", () => {
         modal.classList.remove("active");
         audio.muted = false;
+        audio.play().catch(err => console.log(err));
         btn.classList.add("active");
     })

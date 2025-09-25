@@ -85,6 +85,9 @@ body, html{
 .modal{
   position: fixed;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   top: 0;
   left: 0;
   width: 0;
@@ -97,9 +100,6 @@ body, html{
   width: 100vw;
   height: 100vh;
   z-index: 25;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   pointer-events: auto;
 }
 .modal .modal_content{
