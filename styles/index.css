@@ -24,7 +24,7 @@ body, html{
     height: 50px;
     display: none;
 }
-.music, .shopp{
+.music, .shopp, .confirmar{
   position: fixed;
   border-radius: 50%;
   z-index: 100;
@@ -55,6 +55,97 @@ body, html{
   50%  { transform: rotate(0deg); }
   75%  { transform: rotate(-30deg); }
   100% { transform: rotate(0deg); }
+}
+.confirmar{
+  display: block;
+  --clr: white;
+  --icon-size: 25px;
+  right: 1rem;
+  bottom: 12rem;
+  animation: infinite scale 2s;
+}
+@keyframes scale {
+  50%{
+    transform: scale(1.1);
+  }
+  55%{
+    transform: scale(1);
+  }
+  60%{
+    transform: scale(1.1);
+  }
+  65%{
+    transform: scale(1);
+  }
+  70%{
+    transform: scale(1.1);
+  }
+}
+
+.modal{
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  background: rgba(0,0,0,.8);
+  z-index: 20;
+  transition: display .5s ease allow-discrete;
+}
+.modal.active{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+}
+.modal .modal_content{
+  position: relative;
+  scale: 0;
+  max-width: 400px;
+  height: max-content;
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  transition: scale .3s ease;
+}
+.modal.active .modal_content{
+  scale: 1;
+}
+
+.modal .modal_close{
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  cursor: pointer;
+  --clr: black;
+  background: transparent;
+  --icon-size: 25px;
+  padding: 1rem;
+}
+.modal .modal_text{
+  font-family: Verdana, system-ui;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.7rem;
+}
+.modal .modal_btn_confirmar{
+  display: block;
+  width: max-content;
+  margin: 1rem auto 0 auto;
+  padding: .8rem 2rem;
+  background: var(--clr-1);
+  color: white;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: hatton, system-ui;
+  cursor: pointer;
+  transition: background .3s, color .3s;
+}
+.modal .modal_btn_confirmar:hover{
+  background: #1f2e1f;
 }
 
 .card{
@@ -237,6 +328,11 @@ body, html{
     border-radius: 10px;
     font-size: 1.5rem;
     font-family: hatton, system-ui;
+    transition: background .3s, color .3s;
+}
+.card_button .btn_ubic:hover{
+    background: #6c775e;
+    color: white;
 }
 
 .card .card_timer{
@@ -371,5 +467,8 @@ body, html{
     }
   .card .card_button{
     top: -90px;
+  }
+  .modal .modal_content{
+    width: 80%;
   }
 }

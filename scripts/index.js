@@ -1,6 +1,6 @@
 console.log("hola amorcito");
 
-const fechaObjetivo = new Date("2025-09-20T19:00:00").getTime();
+const fechaObjetivo = new Date("2025-09-27T19:00:00").getTime();
 
   function actualizarCuentaRegresiva() {
     const ahora = new Date().getTime();
@@ -34,6 +34,9 @@ const fechaObjetivo = new Date("2025-09-20T19:00:00").getTime();
 
   const btn = document.getElementById("music");
   const audio = document.getElementById("bg-music");
+  const modalClose = document.getElementById("modal-close");
+  const modal = document.getElementById("modal");
+  const modalConfirmar = document.getElementById("modal-confirmar");
 
     audio.muted = true;
 
@@ -46,3 +49,17 @@ const fechaObjetivo = new Date("2025-09-20T19:00:00").getTime();
     btnShop.addEventListener("click", () => {
         window.open('https://www.thingstogetme.com/1787507aac228', '_blank');
     });
+
+    document.addEventListener("DOMContentLoaded", () => {
+      modal.classList.add("active");
+    });
+    modalClose.addEventListener("click", () => {
+        modal.classList.remove("active");
+        audio.muted = false;
+        btn.classList.add("active");
+    });
+    modalConfirmar.addEventListener("click", () => {
+        modal.classList.remove("active");
+        audio.muted = false;
+        btn.classList.add("active");
+    })

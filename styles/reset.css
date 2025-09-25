@@ -39,8 +39,11 @@
 * > path{
   pointer-events: none;
 }
-button svg{
+button svg,
+a svg{
   fill: var(--clr);
+  width: var(--icon-size);
+  height: var(--icon-size);
 }
 input{
   max-width: 100%;
