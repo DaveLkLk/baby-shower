@@ -1,12 +1,12 @@
 @import url("./reset.css");
 @import url("./modal.css");
-@import url("./btn-flotantes.css");
 
 /* cards */
 @import url("./card-parents.css");
 @import url("./card-timer.css");
 @import url("./card-recepcion.css");
 @import url("./card-sugerencia.css");
+@import url("./btn-flotantes.css");
 
 :root{
     font-size: 15px;
@@ -21,8 +21,9 @@
 body, html{
     background: var(--clr-2);
   }
-
+  
   .container{
+    overflow: hidden;
     display: grid;
     margin: 0 auto;
     width: var(--card-width);
