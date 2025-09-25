@@ -1,0 +1,71 @@
+.card_text.saludo {
+    width: 100%;
+    position: absolute;
+    top: 45px;
+
+  opacity: 0;
+  animation: aparecerRebote 2s ease-out forwards;
+  animation-timeline: view();
+  animation-range: entry 50% cover 30%;
+}
+
+
+.card_text.saludo p{
+    width: 100%;
+    font-family: dancing, system-ui;
+    font-size: 3.1rem;
+    letter-spacing: 3px;
+    color: #886247;
+    font-weight: 700;
+    text-wrap: pretty;
+    text-align: center;
+}
+
+
+
+.card .card_timer{
+    position: absolute;
+    width: 100%;
+    top: 32%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0 2rem;
+}
+.card_timer .num,
+.card_timer .num_desc{
+    text-align: center;
+    font-family: young, system-ui;
+    color: #5c3d19;
+}
+.card_timer .num{
+    font-weight: bold;
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+.card_timer .num_desc{
+    font-size: clamp(.6rem, 2.5vw, .9rem);
+}
+.card_timer .time_dots{
+    font-weight: bolder;
+    font-size: 2rem;
+
+}
+
+@keyframes aparecerRebote {
+  0% {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(10px); /* pasa un poco el destino */
+  }
+  70% {
+    transform: translateY(-5px); /* rebote hacia arriba */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* posición final fija */
+  }
+}

@@ -1,0 +1,66 @@
+.modal{
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inset: 0;
+  background: rgba(0,0,0,.8);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3;
+  --transform: scale(0);
+  --transition: transform .3s;
+}
+.modal--active{
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity .3s;
+  --transform: scale(1);
+  --transition: transform .3s .3s;
+}
+
+.modal_content{
+  position: relative;
+  max-width: 400px;
+  height: max-content;
+  margin: auto;
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  transform: var(--transform);
+  transition: var(--transition);
+}
+
+
+.modal .modal_close{
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  cursor: pointer;
+  --clr: black;
+  background: transparent;
+  --icon-size: 25px;
+  padding: 1rem;
+}
+.modal .modal_text{
+  font-family: Verdana, system-ui;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.7rem;
+}
+.modal .modal_btn_confirmar{
+  display: block;
+  width: max-content;
+  margin: 1rem auto 0 auto;
+  padding: .8rem 2rem;
+  background: var(--clr-1);
+  color: white;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: hatton, system-ui;
+  cursor: pointer;
+  transition: background .3s, color .3s;
+}
+.modal .modal_btn_confirmar:hover{
+  background: #1f2e1f;
+}

@@ -32,36 +32,34 @@ const fechaObjetivo = new Date("2025-09-27T19:00:00").getTime();
   const intervalo = setInterval(actualizarCuentaRegresiva, 1000);
   actualizarCuentaRegresiva();
 
+  const btnShop = document.getElementById("shopp");
   const btn = document.getElementById("music");
   const audio = document.getElementById("bg-music");
-  const modalClose = document.getElementById("modal-close");
   const modal = document.getElementById("modal");
+  const modalClose = document.getElementById("modal-close");
   const modalConfirmar = document.getElementById("modal-confirmar");
 
-    audio.muted = true;
-
+  audio.muted = true;
     btn.addEventListener("click", () => {
         audio.muted = !audio.muted;
         btn.classList.toggle("active");
     });
-
-    const btnShop = document.getElementById("shopp");
     btnShop.addEventListener("click", () => {
         window.open('https://www.thingstogetme.com/1787507aac228', '_blank');
     });
 
-    document.addEventListener("DOMContentLoaded", () => {
-      modal.classList.add("active");
-    });
-    modalClose.addEventListener("click", () => {
-        modal.classList.remove("active");
-        audio.muted = false;
-        audio.play().catch(err => console.log(err));
-        btn.classList.add("active");
-    });
-    modalConfirmar.addEventListener("click", () => {
-        modal.classList.remove("active");
-        audio.muted = false;
-        audio.play().catch(err => console.log(err));
-        btn.classList.add("active");
-    })
+    
+    function openModal(){
+      modal.classList.add("modal--active");
+    }
+    function closeModal(){
+      modal.classList.remove("modal--active");
+
+      audio.muted = false;
+      audio.play().catch(err => console.log(err));
+      btn.classList.add("active");
+    }
+   
+    modalClose.addEventListener("click", closeModal);
+    modalConfirmar.addEventListener("click", closeModal);
+    document.addEventListener("DOMContentLoaded", openModal);

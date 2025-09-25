@@ -1,0 +1,57 @@
+.music, .shopp, .confirmar{
+  position: fixed;
+  border-radius: 50%;
+  z-index: 1;
+  padding: 1.5rem;
+  background-color: var(--clr-1);
+  --clr: var(--clr-2);
+}
+.music{
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  opacity: .5;
+  transition: opacity .3s;
+}
+.music.active{
+  opacity: 1;
+}
+.shopp{
+  bottom: 6rem;
+  right: 1rem;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.596);
+  animation: wiggle 2s infinite;
+}
+@keyframes wiggle {
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(30deg); }
+  50%  { transform: rotate(0deg); }
+  75%  { transform: rotate(-30deg); }
+  100% { transform: rotate(0deg); }
+}
+.confirmar{
+  display: block;
+  --clr: white;
+  --icon-size: 25px;
+  right: 1rem;
+  bottom: 12rem;
+  animation: infinite scale 2s;
+}
+@keyframes scale {
+  50%{
+    transform: scale(1.1);
+  }
+  55%{
+    transform: scale(1);
+  }
+  60%{
+    transform: scale(1.1);
+  }
+  65%{
+    transform: scale(1);
+  }
+  70%{
+    transform: scale(1.1);
+  }
+}

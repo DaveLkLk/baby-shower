@@ -1,0 +1,40 @@
+.card_text.recepcion{
+    font-family: dancing;
+    font-size: 4.4rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 6%;
+    color: #606848;
+
+    opacity: 0;
+    animation: aparecerRecepcion 2s ease-out forwards;
+    animation-timeline: view();
+    animation-range: entry 50% cover 30%;
+}
+.card_button .btn_ubic{
+    padding: 1rem 3rem;
+    background: #8f9e7d;
+    color: white;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-family: hatton, system-ui;
+    transition: background .3s, color .3s;
+}
+.card_button .btn_ubic:hover{
+    background: #6c775e;
+    color: white;
+}
+
+@keyframes aparecerRecepcion {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

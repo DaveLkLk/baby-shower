@@ -1,0 +1,55 @@
+.card_text.sugerencia{
+    width: 100%;
+    position: relative;
+}
+.card_text.sugerencia .sug{
+    font-family: dancing;
+    font-size: clamp(3rem, 5vw, 4rem);
+    text-wrap: nowrap;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    z-index: 5;
+    top: 38px;
+    color: #886247;
+
+    opacity: 0;
+    animation: aparecerSugerencia 2s ease-out forwards;
+    animation-timeline: view();
+    animation-range: entry 50% cover 30%;
+}
+.card_text.sugerencia .sug_text{
+    font-family: young;
+    font-size: clamp(.6rem, 2.7vw, .9rem);
+    position: absolute;
+    width: 90%;
+    text-align: center;
+    top: 110px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.card_text.sugerencia .sug_list{
+    position: absolute;
+    width: 80%;
+    height: max-content;
+    /* text-align: center; */
+    font-weight: 600;
+    font-size: clamp(.5rem, 2.5vw, .9rem);
+    line-height: clamp(.8rem, 3vw, 1rem);
+    left: 50%;
+    top: 220px;
+    font-family: young;
+    display: grid;
+    transform: translateX(-50%);
+}
+
+@keyframes aparecerSugerencia {
+  from {
+    opacity: 0;
+    transform: translateY(-50px); /* inicia arriba */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* posición final */
+  }
+}
